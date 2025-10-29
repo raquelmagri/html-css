@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>midias em HTML5</title>
+</head>
+<body>
+    <h1>imagens dinâmicas</h1>
+    <p>tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do se navegador.</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/1.jpg" type="image/jpg">
+        <source media="(max-width:1050px)" srcset="imagens/2.jpg" type="image/jpg">
+        <img src="imagens/3.jpg" alt="imagen flexível">
+    </picture>
+
+    <h1>reproduzindo áudio</h1>
+    <p>vamos aprender a reproduzir ádios em HTML5</p>
+    <audio src="midias/Cyberpunk Fury - Jimena Contreras.mp3" controls autoplay></audio>
+    <!--MP3 WAV OGG-->
+
+    <audio>
+        <source src="midias/Cyberpunk Fury - Jimena Contreras.mp3" type="audio/mpeg">
+        <source src="midias/Cyberpunk Fury - Jimena Contreras.wav" type="audio/wav">
+        <source src="midias/Cyberpunk Fury - Jimena Contreras.ogg" type="audio/ogg">
+        <p>infelizmente seu navegador não consegue reproduzir áudio. <a href="midias/Cyberpunk Fury - Jimena Contreras.mp3">clique aqui para reproduzir o arquivo MP3</a></p>
+    </audio>
+    
+</body>
+</html>

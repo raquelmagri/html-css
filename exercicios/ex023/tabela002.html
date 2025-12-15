@@ -12,6 +12,16 @@
     table {
         width: 500px;
         border-collapse: collapse;
+        position: relative;
+    }
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+    }
+    tbody > tr:nth-child(2n) {
+        background-color: lightgray
     }
     td, th {
         border: 1px solid black;
@@ -21,6 +31,11 @@
         background-color: gray;
         color: white;
     }
+    thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: gray;
+    }
     td.num {
        text-align: right;
     }
@@ -28,10 +43,11 @@
 <body>
     <h1>Uso de tabela grandes</h1>
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>estado</th>
-                <th>população</th>
+                <th scope="col">estado</th>
+                <th scope="col">população</th>
             </tr>
         </thead>
         <tbody>
@@ -50,7 +66,7 @@
                 <td>bahia</td>
                 <td class="num">14 870 907</td>
             <tr>
-                <td>praná</td>
+                <td>paraná</td>
                 <td class="num">11 890 517</td>
             </tr>
             <tr>
@@ -144,7 +160,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>total de habitantes</th>
+                <th scope="row">total de habitantes</th>
                 <td class="num">213 421 037</td>
             </tr>
         </tfoot>
